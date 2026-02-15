@@ -41,3 +41,30 @@ AntiAim:AddDropdown("Yaw",{"Backward","Forward","Zero"},"Backward",function(v)en
 AntiAim:AddDropdown("Yaw Jitter",{"Disabled","Low","High"},"Disabled",function(v)end)  
 AntiAim:AddToggle("Slow Walk",false,function(v)end)  
 AntiAim:AddToggle("Freestanding",false,function(v)end)
+
+--
+# Key System
+
+**Dyboo Lib**
+
+---
+
+## Example Usage
+
+```lua
+local function Start(Key)
+	-- your code here
+end
+
+local KeySystem = NEVERLOSE:KeySystem(
+	"Key System",
+	"https://link",
+	function(key)
+		if key == "1234" then
+			return true
+		end
+		return false
+	end
+)
+
+KeySystem:Callback(Start)
