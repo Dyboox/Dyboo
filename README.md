@@ -2,54 +2,42 @@
 
 ```lua
 local Dyboo = loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/heads/main/DybooXXLib.lua"))()
-local Window = Dyboo:AddWindow("Dyboo","SSG-08",'original')
+local Window = Dyboo:AddWindow("Dyboo","Example",'original')
 
-Window:AddTabLabel("Aimbot")
-local RageTab = Window:AddTab("Rage","crosshair")
-local LegitTab = Window:AddTab("Legit","mouse")
-Window:AddTabLabel("Common")
+Window:AddTabLabel("Example")
+local MainTab = Window:AddTab("Main","home")
+local ExtraTab = Window:AddTab("Extra","star")
+Window:AddTabLabel("System")
 local VisualTab = Window:AddTab("Visual","earth")
 
-local Main = RageTab:AddSection("MAIN","left")  
-Main:AddToggle("Enabled",true,function(v)end)  
-Main:AddToggle("Silent Aim",true,function(v)end)  
-Main:AddToggle("Automatic Fire",true,function(v)end)  
-Main:AddToggle("Penetrate Walls",true,function(v)end)  
-Main:AddSlider("Field of View",1,180,180,function(v)end)  
+local Main = MainTab:AddSection("MAIN","left")  
+Main:AddToggle("Enable Feature",true,function(v)end)  
+Main:AddToggle("Auto Action",false,function(v)end)  
+Main:AddToggle("Background Run",true,function(v)end)  
+Main:AddToggle("Safe Mode",true,function(v)end)  
+Main:AddSlider("Power Level",1,100,50,function(v)end)  
 
-local Selection = RageTab:AddSection("SELECTION","left")  
-Selection:AddDropdown("Target",{"Highest Damage","Closest"},"Highest Damage",function(v)end)  
-Selection:AddDropdown("Hitboxes",{"Head","Chest","Stomach"},"Head",function(v)end)  
-Selection:AddDropdown("Multipoint",{"Head","Chest","Stomach"},"Head",function(v)end)  
-Selection:AddSlider("Hit Chance",1,100,65,function(v)end)  
-Selection:AddSlider("Min Damage",1,100,100,function(v)end)  
-Selection:AddToggle("Auto Stop",true,function(v)end)  
-Selection:AddToggle("Auto Scope",true,function(v)end)  
+local Settings = MainTab:AddSection("SETTINGS","left")  
+Settings:AddDropdown("Mode",{"Normal","Fast","Extreme"},"Normal",function(v)end)  
+Settings:AddDropdown("Priority",{"High","Medium","Low"},"Medium",function(v)end)  
+Settings:AddDropdown("Profile",{"Default","Custom","Guest"},"Default",function(v)end)  
+Settings:AddSlider("Speed",1,200,100,function(v)end)  
+Settings:AddSlider("Delay",0,10,1,function(v)end)  
+Settings:AddToggle("Protection",true,function(v)end)  
+Settings:AddToggle("Auto Save",true,function(v)end)  
 
-local Other = RageTab:AddSection("OTHER","right")  
-Other:AddDropdown("History",{"Maximum","Medium","Low"},"Maximum",function(v)end)  
-Other:AddToggle("Delay Shot",true,function(v)end)  
-Other:AddToggle("Duck Peek Assist",false,function(v)end)  
-Other:AddToggle("Quick Peek Assist",false,function(v)end)  
-Other:AddDropdown("Magic Bullet",{"Off","On"},"Off",function(v)end)  
-Other:AddDropdown("Rapid Fire",{"Default","Instant"},"Default",function(v)end)  
+local Extra = MainTab:AddSection("EXTRA","right")  
+Extra:AddDropdown("Theme",{"Dark","Light","Blue"},"Dark",function(v)end)  
+Extra:AddToggle("Notification",true,function(v)end)  
+Extra:AddToggle("Sound Effect",false,function(v)end)  
+Extra:AddToggle("Mini Mode",false,function(v)end)  
+Extra:AddDropdown("Animation",{"Off","Smooth","Fast"},"Smooth",function(v)end)  
+Extra:AddDropdown("Refresh Rate",{"Low","Medium","High"},"High",function(v)end)  
 
-local AntiAim = RageTab:AddSection("ANTI-AIM","right")  
-AntiAim:AddToggle("Enabled",false,function(v)end)  
-AntiAim:AddDropdown("Pitch",{"Down","Up","Zero"},"Down",function(v)end)  
-AntiAim:AddDropdown("Yaw",{"Backward","Forward","Zero"},"Backward",function(v)end)  
-AntiAim:AddDropdown("Yaw Jitter",{"Disabled","Low","High"},"Disabled",function(v)end)  
-AntiAim:AddToggle("Slow Walk",false,function(v)end)  
-AntiAim:AddToggle("Freestanding",false,function(v)end)
-NEVERLOSE:KeySystem(
-	"Key System",
-	"https://link",
-	function(key)
-		if key == "1234" then
-			return true
-		end
-		return false
-	end
-)
-
-KeySystem:Callback(Start)
+local Control = MainTab:AddSection("CONTROL","right")  
+Control:AddToggle("Enabled",false,function(v)end)  
+Control:AddDropdown("State",{"Idle","Run","Pause"},"Idle",function(v)end)  
+Control:AddDropdown("Direction",{"Forward","Backward","None"},"None",function(v)end)  
+Control:AddDropdown("Variation",{"Disabled","Low","High"},"Disabled",function(v)end)  
+Control:AddToggle("Slow Mode",false,function(v)end)  
+Control:AddToggle("Assist",false,function(v)end)
