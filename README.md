@@ -1,6 +1,5 @@
 # Key System
 Dyboo Lib
-
 ```local function Start(Key)
 	-- your code here
 end
