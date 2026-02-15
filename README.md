@@ -1,8 +1,8 @@
 # Example Dyboo Lib
 
 ```lua
-local NEVERLOSE = loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/heads/main/DybooXXLib.lua"))()
-local Window = NEVERLOSE:AddWindow("NEVERLOSE","SSG-08",'original')
+local Dyboo = loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/heads/main/DybooXXLib.lua"))()
+local Window = Dyboo:AddWindow("Dyboo","SSG-08",'original')
 
 Window:AddTabLabel("Aimbot")
 local RageTab = Window:AddTab("Rage","crosshair")
