@@ -1,10 +1,3 @@
---[[
-
-INTRODUCING NEVERLOSE CS2 CHEAT MENU
-BUILD DATE: 4/21/24
-VERSION: 3
-MADE BY CLUDEHUB
-]]
 local LocalPlayer = game:GetService('Players').LocalPlayer;
 local Mouse = LocalPlayer:GetMouse();
 local InputService = game:GetService('UserInputService');
@@ -1164,10 +1157,6 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/hea
 -- DraggingToggle
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/heads/main/DragToggleSetting.lua"))()
 ----
-
--- grow a garden function stock timer
-loadstring(game:HttpGet("https://raw.githubusercontent.com/CludeHub/SourceCludeLib/refs/heads/main/GrowAGardenStockFunction.lua"))()
---
 
 -- slap battle searchbox function 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Dyboox/Dyboo/refs/heads/main/SearchFunction.lua"))()
@@ -3572,5 +3561,3 @@ task.spawn(function()
 end)
 
 return NEVERLOSE
-
-
